@@ -19,7 +19,14 @@
 			"error",
 			{
 				"argsIgnorePattern": "^_"
+
 			}
-		]
+		],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTaggedTemplates": true
+      }
+    ]
 	}
 }
