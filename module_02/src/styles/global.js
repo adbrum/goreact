@@ -1,4 +1,6 @@
-import {injectGlobal} from 'styled-components';
+import { injectGlobal } from 'styled-components';
+
+import 'font-awesome/css/font-awesome.css';
 
 injectGlobal`
  * {
