@@ -1,29 +1,42 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 
-const TodoList = ({ todos }) => (
-  <ul>
-    {todos.map(todo => (
-      <li key={todo.id}>
-        {todo.text}
-      </li>
-    ))}
-  </ul>
+const TodoList = ({ todos, addTodo }) => (
+  <Fragment>
+    <ul>
+      {todos.map(todo => (
+        <li key={todo.id}>
+          {todo.text}
+        </li>
+      ))}
+    </ul>
+    <button type="submit" onClick={() => addTodo('Novo todo')}>
+      Adicionar
+    </button>
+  </Fragment>
 );
-
-const mapStateToPro = state => ({
-  todos: state.todos,
-});
 
 TodoList.PropTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
+      addTodo: PropTypes.func.isRequired,
       id: PropTypes.number,
       text: PropTypes.string,
     }),
   ).isRequired,
 };
 
-export default connect(mapStateToPro)(TodoList);
+const mapStateToPro = state => ({
+  todos: state.todos,
+});
+
+const mapDispachToProps = dispatch => ({
+  addTodo: text => dispatch({ type: 'ADD_TODO', payload: { text } }),
+});
+
+export default connect(
+  mapStateToPro,
+  mapDispachToProps,
+)(TodoList);
