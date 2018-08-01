@@ -18,6 +18,7 @@ class Main extends Component {
           url: PropTypes.string,
         }),
       ),
+      error: PropTypes.oneOfType([null, PropTypes.string]),
     }).isRequired,
   };
 
@@ -47,10 +48,15 @@ class Main extends Component {
           <button type="submit">
 Adicionar
           </button>
-          {this.props.favorites.loading && (
-          <spam>
+          {favorites.loading && (
+          <span>
 Carregando...
-          </spam>
+          </span>
+          )}
+          {!!favorites.error && (
+          <span style={{ color: '#F00' }}>
+            {favorites.error}
+          </span>
           )}
         </form>
         <ul>
