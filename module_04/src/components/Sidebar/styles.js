@@ -58,11 +58,11 @@ export const NewPlayList = styled.button`
   align-items: center;
   padding: 15px 25px;
 
-  &:hover{
-    color: #FFF;
+  &:hover {
+    color: #fff;
   }
 
   img {
-    margin-right; 10px;
+    margin-right: 10px;
   }
-  `;
+`;
