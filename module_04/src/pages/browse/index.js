@@ -10,7 +10,7 @@ const Browse = () => (
 Navegar
     </Title>
     <List>
-      <PlayList>
+      <PlayList to="/playlists/1">
         <img src="https://img.cdandlp.com/2015/05/imgL/117530031.jpg" alt="The Cure" />
         <strong>
 Rock Pop
@@ -19,7 +19,7 @@ Rock Pop
 Relaxe enquanto você progrma ouvindo apenas as melhores do rock mundial!
         </p>
       </PlayList>
-      <PlayList>
+      <PlayList to="/playlists/1">
         <img src="https://img.cdandlp.com/2015/05/imgL/117530031.jpg" alt="The Cure" />
         <strong>
 Rock Pop
@@ -28,7 +28,7 @@ Rock Pop
 Relaxe enquanto você progrma ouvindo apenas as melhores do rock mundial!
         </p>
       </PlayList>
-      <PlayList>
+      <PlayList to="/playlists/1">
         <img src="https://img.cdandlp.com/2015/05/imgL/117530031.jpg" alt="The Cure" />
         <strong>
 Rock Pop
@@ -37,7 +37,7 @@ Rock Pop
 Relaxe enquanto você progrma ouvindo apenas as melhores do rock mundial!
         </p>
       </PlayList>
-      <PlayList>
+      <PlayList to="/playlists/1">
         <img src="https://img.cdandlp.com/2015/05/imgL/117530031.jpg" alt="The Cure" />
         <strong>
 Rock Pop
