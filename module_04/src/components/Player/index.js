@@ -18,12 +18,8 @@ const Player = () => (
     <Current>
       <img src="https://img.cdandlp.com/2015/05/imgL/117530031.jpg" alt="The Cure" />
       <div>
-        <span>
-Boys don't cry
-        </span>
-        <small>
-The Cure
-        </small>
+        <span>Boys don't cry</span>
+        <small>The Cure</small>
       </div>
     </Current>
 
@@ -50,9 +46,7 @@ The Cure
       </Controls>
 
       <Time>
-        <span>
-1:39
-        </span>
+        <span>1:39</span>
         <ProgressSlider>
           <Slider
             railStyle={{ background: '#404040', borderRadius: 10 }}
@@ -60,9 +54,7 @@ The Cure
             handleStyle={{ border: 0 }}
           />
         </ProgressSlider>
-        <span>
-4:24
-        </span>
+        <span>4:24</span>
       </Time>
     </Progress>
 
