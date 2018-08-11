@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Creators as PlayLIstActions } from '../../store/ducks/playlists';
 
+import Loading from '../../components/Loading';
+
 import {
   Container, Title, List, PlayList,
 } from './styles';
@@ -21,6 +23,7 @@ class Browse extends Component {
           description: PropTypes.string,
         }),
       ),
+      loading: PropTypes.bool,
     }).isRequired,
   };
 
@@ -31,8 +34,7 @@ class Browse extends Component {
   render() {
     return (
       <Container>
-        tumbnail
-        <Title>Navegar</Title>
+        <Title>Navegar {this.props.playlists.loading && <Loading />}</Title>
         <List>
           {this.props.playlists.data.map(playlist => (
             <PlayList key={playlist.id} to={`/playlists/${playlist.id}`}>
